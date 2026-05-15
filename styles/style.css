@@ -1,1 +1,19 @@
-/* место для вашего кода */
+body {
+  margin: 0;
+  font-family: Raleway, sans-serif;
+  background-color: #FFFFFF;
+  font-weight: 700;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+blockquote{
+  margin:0;
+  padding: 0;
+}
