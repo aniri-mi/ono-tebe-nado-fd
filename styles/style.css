@@ -1,19 +1,100 @@
-body {
-  margin: 0;
-  font-family: Raleway, sans-serif;
-  background-color: #FFFFFF;
-  font-weight: 700;
+.header,
+.cover,
+.lots,
+.about,
+.footer {
+    padding: 20px 0; 
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul,
-ol,
-blockquote{
-  margin:0;
-  padding: 0;
+.cover,
+.lots,
+.about {
+    margin-bottom: 40px;
+}/* Header */
+.header { display: grid; /* Преобразуем в грид-контейнер */
+    grid-template-columns: 1fr min-content 1fr; /* Три колонки */
+    align-items: center; /* Выравнивание по вертикали */
+    padding: 15px 20px; /* Внутренние отступы */
+    background-color: #fff; /* Белый фон */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Легкая тень */
 }
+.header__menu {}
+.header__links-list {}
+.header__link-list-item{}
+.header__link-list-item_no-bullit{}
+.header__link {}
+.header__link_active{}
+.header__logo {font-size: 24px;
+    color: #007BFF; /* Акцентный цвет */
+}
+.header__logo-image{}
+.adress{ max-width: 200px; /* Ограничим ширину блока */
+    justify-self: end; /* Выровняем справа */}
+.address {}
+
+/* Cover */
+.cover {
+display: flex;
+background-image: url(/images/Cover.jpg);
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+width: 1100;
+max-height: 757;
+color: #FFF;
+position: relative; 
+}
+.cover::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон */
+    z-index: 1; 
+}/* Расположим оверлей под содержанием */
+.overlay{}
+.cover__title {
+    position: relative;
+    z-index: 2; }
+.aligned-text_left{}
+.aligned-text_center{}
+.aligned-text_right{}
+.letter-spacing-extended{}
+.no-letter-spacing{}
+.cover__description {}
+.cover__description-text{}
+.bet-button {}
+
+/* Lots */
+.lots {}
+.lots__heading {}
+.lots__card-list {}
+.lots__card-list-item {}
+.card-link {}
+.card {}
+.card_type_film{}
+.card_type_book{}
+.card_type_picture{}
+.card-title {}
+.card-text {}
+.lots__look-more-link {}
+
+/* About */
+.about {} {}
+.about__column {}
+.about__logo{}
+.about__logo-image{}
+.about__title {}
+.about__text {}
+
+/* Footer */
+.footer {}
+.footer__menu {}
+.footer__menu-list {}
+.footer__menu-list-item{}
+.footer__menu-link {}
+.footer__menu-link_active{}
+.footer__social-list {}
+.footer__social-list-item{}
+.footer__social-link {}
+.footer__social-icon{}

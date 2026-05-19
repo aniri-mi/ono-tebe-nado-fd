@@ -1,25 +1,111 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Оно тебе надо — аукцион вещей, в которые никто не верил</title>
-    <link rel="stylesheet" href="./fonts/fonts.css"/>
-    <link rel="stylesheet" href="./styles/style.css"/>
-    <link rel="stylesheet" href=".styles/global.css"/>
-  </head>
-  <body>
-    <header>
-      <nav></nav>
-      <a></a>
-      <address></address>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ОНО ТЕБЕ НАДО</title>
+    <!-- Подключение шрифтов -->
+    <link rel="stylesheet" href="styles/fonts.css">
+    <!-- Глобальные стили -->
+    <link rel="stylesheet" href="styles/global.css">
+    <!-- Локальные стили -->
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+       <div class="container">
+        <nav class="header__menu">
+            <a href="#" class="header__logo">ОНО ТЕБЕ НАДО</a>
+            <ul class="header__links-list">
+                <li><a href="#" class="header__link">главная</a></li>
+                <li><a href="#" class="header__link">посмотреть лоты</a></li>
+                <li><a href="#" class="header__link">об аукционе</a></li>
+            </ul>
+        </nav>
+        <address class="address">
+            <a href="tel:+79995555555">+7 999 555 5555</a>
+            <a href="mailto:info@sobaka.ge">info@sobaka.ge</a>
+             <p>наб. Принсенграхт 263-265, Амстердам</p>
+        </address> 
+       </div>
     </header>
+
+    <!-- Main Content -->
     <main>
-      <cover></cover>
-      <lots></lots>
-      <about></about>
+        <!-- Первая секция: обложка (.cover) -->
+        <section class="cover">
+            <div class="container">
+        <h1 class="cover__title">
+            <span class="title-text title-text_left">Оно</span>
+          <span class="title-text title-text_center">тебе</span>
+          <span class="title-text title-text_right">надо</span>
+        </h1>
+        <div class="cover__description">
+            <p>АУКЦИОН ВЕЩЕЙ, В КОТОРЫЕ НИКТО НЕ ВЕРИЛ</p>
+            <a href="#" class="bet-button">СДЕЛАТЬ СТАВКУ</a>
+        </div>
+    </div><!-- Заголовок и описание -->
+        </section>
+
+        <!-- Вторая секция: лоты (.lots) -->
+        <section class="lots"> <!-- Заголовок, список карточек и ссылка -->
+            <div class="container">
+        <h2 class="lots__heading">ЛОТЫ</h2>
+        <ul class="lots__card-list">
+            <li class="lots__card-list-item">
+                <a href="#" class="card-link">
+                    <article class="card">
+                        <h3 class="card-title">Название лота 1</h3>
+                        <p class="card-text">Описание лота 1</p>
+                    </article>
+                </a>
+            </li>
+            <!-- Аналогично для других карточек -->
+        </ul>
+        <a href="#" class="lots__look-more-link">Посмотреть больше лотов</a>
+    </div>
+        </section>
+
+        <!-- Третья секция: информация об аукционе (.about) -->
+        <section class="about"> <!-- Два контейнера для колонок -->
+             <div class="about__column">
+                    <div class="about__logo">
+                <!-- Логотип -->
+            </div>
+            <div class="about__logo-image">
+                <h2 class="about__title">ОБ АУКЦИОНЕ</h2>
+                <div class="about__text">
+                    <p>Первый абзац</p>
+                    <p>Второй абзац</p>
+                </div>
+            </div>
+        </div>
+    </div>
+        </section>
     </main>
-    <footer></footer>
-  </body>
-</html>
+
+    <!-- Footer -->
+    <footer class="footer"><!-- Адрес, меню и ссылки на соцсети -->
+         <div class="container">
+        <address class="address">
+            <a href="tel:+79995555555">+7 999 555 5555</a>
+            <a href="mailto:info@sobaka.ge">info@sobaka.ge</a>
+            <p>наб. Принсенграхт 263-265, Амстердам</p>
+        </address>
+        <nav class="footer__menu">
+            <ul class="footer__menu-list">
+                <li><a href="#" class="footer__menu-link-active">главная</a></li>
+                <li><a href="#" class="footer__menu-link">посмотреть лоты</a></li>
+                <li><a href="#" class="footer__menu-link">об аукционе</a></li>
+            </ul>
+        </nav>
+        <ul class="footer__social-list">
+            <li><a href="#" class="footer__social-link">Социальная сеть 1</a></li>
+            <li><a href="#" class="footer__social-link">Социальная сеть 2</a></li>
+            <li><a href="#" class="footer__social-link">Социальная сеть 3</a></li>
+        </ul>
+    </div>
+    </footer>
+</body>
