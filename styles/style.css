@@ -78,72 +78,72 @@ letter-spacing: 0%;
 }
 .cover {
   position: relative; /* Относительное позиционирование для оверлея */
-  min-height: 600px; /* Минимальная высота секции */
   background: url(/images/cover.jpg) center/cover no-repeat; /* Фоновое изображение */
   display: flex;
   background-size: cover; 
   color: #fff;
   width: 1100px;
-  max-height: 757px;
-  text-transform: uppercase;
-  flex-direction: column;
-  padding: 162px 23px 50px;
+  height: 757px;
+  top: 293px;
 }
-
-.overlay {
-  position: absolute; /* Абсолютное позиционирование оверлея */
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.8); /* Полупрозрачный чёрный фон */
-  z-index: 1; /* Слои: оверлей выше контента */
-}
-
 .cover__title {
   position: relative; /* Относительное позиционирование для z-index */
-  z-index: 2; /* Заголовок выше оверлея */
-  text-align: center;
+  text-align: center; /* Выравнивание по центру */
   color: #fff; /* Белый цвет текста */
-  text-transform: uppercase; /* Заглавные буквы */
-  font-size: 4rem; /* Большой размер шрифта */
-  line-height: 1.2; /* Межстрочный интервал */
-  margin-top: 100px; /* Отступ сверху */
+  font-size: 100px; /* Большой размер шрифта */
+  line-height: 114.999%; /* Межстрочный интервал */
+  margin-top: 165px; /* Отступ сверху */
+  font-size: 6em; /* Очень крупный размер шрифта */
+  font-weight: 700; /* Жирный шрифт */
+  margin-bottom: 50px; /* Небольшой отступ снизу */
+  text-transform: uppercase; /* Приведение текста к верхнему регистру */
+  letter-spacing: 30%;
+  z-index: 2;
 }
 
 .aligned-text {
   display: block; /* Каждое слово — отдельный блок */
-  text-align: center;
   
 }
 .aligned-text_left{
-padding-left: 24px;
-  padding-top: 5px;
+ margin: 165px 764px 477px 50px;
+ width: 286px;
+ height: 115px;
 }
 .aligned-text_center{
-text-align: center;
-  padding-top: 18px;
-  padding-left: 25px;
+margin: 300px 380.5px 342px 380.5px;
+width: 339px;
+height: 115px;
 }
 .aligned-text_right{
-text-align: right;
-  padding-bottom: 106px;
-  padding-top: 18px;
+margin: 435px 50px 207px 663px;
+width: 387px;
+height: 115px;
 }
 .cover__description {
+    display: flex;
   position: relative; /* Относительное позиционирование */
-  z-index: 2; /* Контейнер выше оверлея */
-  text-align: center;
   padding: 50px 0; /* Отступы сверху/снизу */
    position: relative;
-  z-index: 1;
-   display: flex;
-  flex-direction: row;
   justify-content: center;
   font-size: 22px;
-  align-items: center;
   padding-right: 29px;
   padding-left: 25px;
+  z-index: 2;
+   display: flex; /* Упорядочим элементы в линию */
+    flex-direction: column; /* Элементы идут друг под другом */
+    align-items: center; /* Выравнивание по центру */
+    text-align: center; /* Текст по центру */
+    width: 637px;
+    height: 28px;
+    display: grid;
+    grid-template-columns: repeat(min-content, 2);
+    grid-auto-flow: column;
+    position: absolute;
+    z-index: 2;
+    top: 600px;
+    width: 1100px;
+    height: 157px;
 }
 
 .cover__description-text {
@@ -151,6 +151,10 @@ text-align: right;
   color: #fff; /* Белый цвет текста */
   font-size: 1.2rem; /* Размер шрифта */
   word-spacing: 5px; /* Расстояние между словами */
+  font-size: 1.2em; /* Немного больший размер шрифта */
+    color: #fff; /* Белый цвет текста */
+    margin-bottom: 20px; /* Отступ снизу до кнопки */
+    letter-spacing: 0.1em; /* Увеличенное расстояние между буквами */
 }
 
 .bet-button {
@@ -161,12 +165,19 @@ text-align: right;
   font-size: 1rem; /* Размер шрифта */
   font-weight: 600; /* Жирный шрифт */
   cursor: pointer; /* Курсор при наведении */
-  border-radius: 5px; /* Скруглённые углы */
   transition: all 0.3s ease; /* Плавный переход */
+   display: inline-block;
+    padding: 10px 20px;
+    background-color: transparent; /* Прозрачный фон */
+    color: #fff; /* Белый цвет текста */
+    border: 2px solid #fff; /* Белая рамка */
+    border-radius: 5px; /* Скругленные углы */
+    text-decoration: none;
+    transition: background-color 0.3s; /* Плавный переход */
 }
 .bet-button:hover {
-  background-color: #fff; /* При наведении — белый фон */
-  color: #333; /* Чёрный текст */
+  background-color: #000; /* При наведении — белый фон */
+  color: #000; /* Чёрный текст */
 }
 .lots {
     width: 1052px;
@@ -224,70 +235,46 @@ letter-spacing: 0%;
   padding: 48px 40px;
   height: 100%;
   z-index: 1;
-  color: #ffffff;
-  background-color: rgb(0, 0, 0, 0.5);
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .overlay { /* Оверлей для карточек (переиспользуем класс) */
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  opacity: 0; /* Прозрачность по умолчанию */
-  transition: opacity 0.3s ease; /* Плавное появление */
-   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+
 }
+
 .card__title {
-  margin: 20px; /* Отступы внутри карточки */
-  color: #000; /* Белый цвет текста */
-  font-size: 22px; /* Размер шрифта */
-  font-weight: 700; /* Жирный шрифт */
-  line-height: 1.4; /* Межстрочный интервал */
-  font-family: Raleway;
-font-style: Bold;
-leading-trim: NONE;
-line-height: 120%;
-letter-spacing: 0%;
-text-transform: uppercase;
-text-decoration: underline;
-text-decoration-style: solid;
-text-decoration-offset: 0%;
-text-decoration-thickness: 0%;
-    color: white;
-  font-size: 20px;
-  margin-bottom: 10px;
+    color: #fff;
+  font-size: 22px;
+  text-transform: uppercase;
+  text-decoration: underline;
+  position: relative;
   z-index: 2;
-  padding: 0 15px;
-
-
-
 }
 
 .card__text {
+  color: #fff;
+  font-size: 20px;
   margin: 10px 20px; /* Отступы текста */
-  color: #000; /* Белый цвет текста */
-  font-size: 0.9rem; /* Размер шрифта */
   line-height: 1.6; /* Межстрочный интервал */
-  color: white;
-  font-size: 16px;
-  line-height: 1.5;
+  line-height: 120%;
+  position: relative;
+  padding: 20px;
+  height: 100%;
   z-index: 2;
-  padding: 0 15px;
 }
 .lots__look-more-link {
   display: inline-block;
   margin-top: 30px;
   padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
+  color: #000;
   text-decoration: none;
   border-radius: 5px;
   font-size: 18px;
@@ -295,21 +282,21 @@ text-decoration-thickness: 0%;
 }
 
 .card_type_film {
-  background: url(/images/card-lot-01.jpg) cover no-repeat; /* Фоновое изображение для карточки с фильмом */
+  background: url(/images/card-lot-01.jpg) center/cover no-repeat; 
  min-width: 334px;
 min-height: 596px;
-  background-color: #333;
+  background-color: #000;
 }
 
 .card_type_book {
-  background: url(/images/card-lot-02.jpg) cover no-repeat; 
+  background: url(/images/card-lot-02.jpg) center/cover no-repeat; 
  min-width: 334px;
     min-height: 596px;
-     background-color: #555;
+     background-color: #000;
 }
 .card_type_picture{
-background: url(/images/card-lot-03.jpg) cover no-repeat; 
+background: url(/images/card-lot-03.jpg) center/cover no-repeat; 
 min-width: 334px;
     min-height: 596px;
-     background-color: #777;
+     background-color: #000;
 }
