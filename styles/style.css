@@ -5,14 +5,14 @@
   background-color: #fff; /* Цвет фона */
   max-width: 100%;
   color: #000;
-  padding: 93px 50px 95px;
+  padding: 93px 51px 95px 50px;
  }
 .header__menu {
   display: flex;
-  gap: 38px;
+  gap: 34px;
   align-items: center;
   box-sizing: border-box;
- margin: ;
+ 
  }
 .header__link {
   font-family: Raleway;
@@ -70,30 +70,35 @@ min-width: 105px;
   font-size: 18px;          /* Пример размера шрифта — замените на нужное */
   color: #000000;              /* Пример цвета текста — замените на нужное */
 }
+.overlay { /* Оверлей для карточек (переиспользуем класс) */
+  position: absolute;
+  min-height: 0%;
+  min-width: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 2;
 
+}
 .cover {
-  position: relative; /* Относительное позиционирование для оверлея */
-  background: url(/images/cover.jpg) center/cover no-repeat; /* Фоновое изображение */
   display: flex;
-  background-size: cover; 
+  position: relative;
+  background: url(/images/cover.jpg) center/cover no-repeat; /* Фоновое изображение */
   color: #fff;
+  letter-spacing: 30%;
   width: 1100px;
   height: 757px;
-  top: 293px;
 }
 .cover__title {
-  position: relative; /* Относительное позиционирование для z-index */
-  text-align: center; /* Выравнивание по центру */
-  color: #fff; /* Белый цвет текста */
-  font-size: 100px; /* Большой размер шрифта */
-  line-height: 114.999%; /* Межстрочный интервал */
-  margin-top: 165px; /* Отступ сверху */
-  font-size: 6em; /* Очень крупный размер шрифта */
-  font-weight: 700; /* Жирный шрифт */
-  margin-bottom: 50px; /* Небольшой отступ снизу */
-  text-transform: uppercase; /* Приведение текста к верхнему регистру */
-  letter-spacing: 30%;
   z-index: 2;
+  font-size: 100px; /* Большой размер шрифта */
+  font-weight: 700; /* Жирный шрифт */
+  text-transform: uppercase; /* Приведение текста к верхнему регистру */
+  padding: 165px 50px 207px 50px;
+  width: 1100px;
+  height: 757px;
 }
 
 .aligned-text {
@@ -101,73 +106,51 @@ min-width: 105px;
   
 }
 .aligned-text_left{
- margin: 165px 764px 477px 50px;
- width: 286px;
- height: 115px;
+  text-align: left;
+ 
 }
 .aligned-text_center{
-margin: 300px 380.5px 342px 380.5px;
-width: 339px;
-height: 115px;
+  text-align: center;
+  padding-top: 13px;
+  padding-left: 30px;
 }
 .aligned-text_right{
-margin: 435px 50px 207px 663px;
-width: 387px;
-height: 115px;
+  text-align: right;
+      padding-top: 19px;
+    padding-left: 613px;
 }
 .cover__description {
-    display: flex;
-  position: relative; /* Относительное позиционирование */
-  padding: 50px 0; /* Отступы сверху/снизу */
-   position: relative;
-  justify-content: center;
-  font-size: 22px;
-  padding-right: 29px;
-  padding-left: 25px;
-  z-index: 2;
-   display: flex; /* Упорядочим элементы в линию */
-    flex-direction: column; /* Элементы идут друг под другом */
-    align-items: center; /* Выравнивание по центру */
-    text-align: center; /* Текст по центру */
-    width: 637px;
-    height: 28px;
     display: grid;
-    grid-template-columns: repeat(min-content, 2);
     grid-auto-flow: column;
     position: absolute;
-    z-index: 2;
-    top: 600px;
-    width: 1100px;
-    height: 157px;
+    gap: 20px;
+  z-index: 2;
+  margin: 656px 50px 50px 50px;
+    width: 1000px;
+    height: 51px;
 }
 
 .cover__description-text {
-  margin-bottom: 30px; /* Отступ под текстом */
-  color: #fff; /* Белый цвет текста */
   font-size: 1.2rem; /* Размер шрифта */
   word-spacing: 5px; /* Расстояние между словами */
-  font-size: 1.2em; /* Немного больший размер шрифта */
-    color: #fff; /* Белый цвет текста */
     margin-bottom: 20px; /* Отступ снизу до кнопки */
     letter-spacing: 0.1em; /* Увеличенное расстояние между буквами */
 }
 
 .bet-button {
-  padding: 15px 30px; /* Внутренние отступы кнопки */
-  background-color: transparent; /* Прозрачный фон */
-  border: 2px solid #fff; /* Белая рамка */
-  color: #fff; /* Белый текст */
-  font-size: 1rem; /* Размер шрифта */
-  font-weight: 600; /* Жирный шрифт */
-  cursor: pointer; /* Курсор при наведении */
-  transition: all 0.3s ease; /* Плавный переход */
-   display: inline-block;
-    padding: 10px 20px;
-    background-color: transparent; /* Прозрачный фон */
-    color: #fff; /* Белый цвет текста */
-    border: 2px solid #fff; /* Белая рамка */
-    text-decoration: none;
-    transition: background-color 0.3s; /* Плавный переход */
+  border: none;
+  background-color: transparent;
+  padding: 12px 24px; /* Внутренние отступы */
+   color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 14px;
+  border: 2px solid #fff; /* Контурная рамка */
+  border-radius: 4px;
+  cursor: pointer;
+  
+  /* Плавные переходы */
+  transition: all 0.3s ease;
 }
 .bet-button:hover {
   background-color: #000; /* При наведении — белый фон */
@@ -231,18 +214,6 @@ letter-spacing: 0%;
   z-index: 1;
   color: #fff;
   background-color: rgba(0, 0, 0, 0.5);
-}
-
-.overlay { /* Оверлей для карточек (переиспользуем класс) */
-  position: absolute;
-  min-width: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 2;
-
 }
 
 .card__title {
