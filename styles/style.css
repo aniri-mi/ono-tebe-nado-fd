@@ -3,7 +3,6 @@
   grid-template-columns: 1fr min-content 1fr; /* Три колонки: меню, логотип, адрес */
   align-items: center; /* Выравнивание по вертикали */
   background-color: #fff; /* Цвет фона */
-  max-width: 100%;
   color: #000;
   padding: 93px 51px 95px 50px;
  }
@@ -24,9 +23,10 @@
 .header__links-list {
   display: flex;
   list-style: none;
-  gap: 30px;
+  gap: 34px;
   text-transform: lowercase;
   flex-direction: row;
+  font-size: 18px;
 }
 .header__links-list-item {
  list-style-type: circle;
@@ -42,15 +42,13 @@ text-decoration: none;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  width: 129px;
-  height: 104px;
+  width: 148px;
+  height: 105px;
 }
 .header__logo-image {
   display: block;
   object-fit: contain; /* Сохраняем пропорции, не растягиваем */
-  max-width: 129px;
-min-width: 105px;  
+  max-width: 148px;
 }
 .adress{
   display: flex;           /* Включаем флексбокс — теперь дочерние элементы (p) будут flex-элементами */
@@ -61,11 +59,13 @@ min-width: 105px;
 }
 .header__address {
    max-width: 240px;         /* Задаём максимальную ширину (значение взято условно — замените на точную из макета) */
-  justify-self: end;  
+  height: 98px;
+   justify-self: end;  
+  font-size: 18px;
 }
 .address p {
   font-style: normal; /* Возвращаем прямой шрифт */
-  margin: 0;                /* Убираем отступы между строками, если не нужны */
+  margin-bottom: 4px;                /* Убираем отступы между строками, если не нужны */
   font-family: inherit;     /* Шрифт наследуется от родителя */
   font-size: 18px;          /* Пример размера шрифта — замените на нужное */
   color: #000000;              /* Пример цвета текста — замените на нужное */
@@ -111,19 +111,19 @@ min-width: 105px;
 }
 .aligned-text_center{
   text-align: center;
-  padding-top: 13px;
+  padding-top: 16px;
   padding-left: 30px;
 }
 .aligned-text_right{
   text-align: right;
-      padding-top: 19px;
+      padding-top: 18px;
     padding-left: 613px;
 }
 .cover__description {
     display: grid;
     grid-auto-flow: column;
     position: absolute;
-    gap: 20px;
+    gap: 38px;
   z-index: 2;
   margin: 656px 50px 50px 50px;
     width: 1000px;
@@ -131,48 +131,34 @@ min-width: 105px;
 }
 
 .cover__description-text {
-  font-size: 1.2rem; /* Размер шрифта */
-  word-spacing: 5px; /* Расстояние между словами */
-    margin-bottom: 20px; /* Отступ снизу до кнопки */
-    letter-spacing: 0.1em; /* Увеличенное расстояние между буквами */
+  font-size: 22px; /* Размер шрифта */
+  word-spacing: 18px; /* Расстояние между словами */
+  margin-top: 1px;
+    letter-spacing: 0.002em; /* Увеличенное расстояние между буквами */
+    padding-top: 12px;
 }
 
 .bet-button {
-  border: none;
   background-color: transparent;
-  padding: 12px 24px; /* Внутренние отступы */
+  padding: 12px 32px; /* Внутренние отступы */
    color: #fff;
-  font-weight: 700;
+  font-weight: 400;
   text-transform: uppercase;
-  font-size: 14px;
-  border: 2px solid #fff; /* Контурная рамка */
-  border-radius: 4px;
+  font-size: 22px;
+  border: 1px solid #fff; /* Контурная рамка */
   cursor: pointer;
-  
-  /* Плавные переходы */
-  transition: all 0.3s ease;
-}
-.bet-button:hover {
-  background-color: #000; /* При наведении — белый фон */
-  color: #000; /* Чёрный текст */
+  height: 51px;
+  margin-left: 68px;
 }
 .lots {
     width: 1052px;
-    height: 723px;
     margin: 180px 24px 120px;  
 }
 .lots__heading {
-  margin-bottom: 30px; /* Отступ под заголовком */
   font-size: 40px; /* Размер шрифта заголовка */
-  font-weight: 600; /* Жирный шрифт */
   margin: 0px 915px 27px 40px;
-  font-weight: bold;
-  width: 121;
-  height: 47;
-  left: 40px;
-leading-trim: NONE;
-line-height: 100%;
-letter-spacing: 0%;
+  width: 121px;
+  height: 47px;
 }
 .lots__card-list {
   display: flex; /* Карточки в строку */
@@ -180,40 +166,28 @@ letter-spacing: 0%;
   gap: 25px; /* Расстояние между карточками */
   justify-content: center; /* Выравнивание по центру */
   list-style: none;
-  padding: 0;
 }
 .lots__card-list-item {
- display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     width: 334px;
     height: 596px;
-    flex-basis: 334px;
-    box-sizing: border-box;
-    position: relative;
-
 }
 .card-link {
   display: block; /* Занимает всю площадь карточки */
   text-decoration: none; /* Убираем подчёркивание */
-  display: block;
   position: relative;
-  height: 400px;
+  height: 100%;
   background-position: center;
   background-size: cover;
-  text-decoration: none;
 }
 .card {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: flex-end; /*текст внизу*/
   position: relative; /* Относительное позиционирование для оверлея */
   overflow: hidden; /* Скрываем переполнение */
   padding: 48px 40px;
   height: 100%;
-  z-index: 1;
   color: #fff;
-  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .card__title {
@@ -221,30 +195,27 @@ letter-spacing: 0%;
   font-size: 22px;
   text-transform: uppercase;
   text-decoration: underline;
-  position: relative;
   z-index: 2;
 }
 
 .card__text {
+  align-content: end;
   color: #fff;
   font-size: 20px;
-  margin: 10px 20px; /* Отступы текста */
-  line-height: 1.6; /* Межстрочный интервал */
-  line-height: 120%;
-  position: relative;
-  padding: 20px;
+  line-height: 120%; /* Межстрочный интервал */
   height: 100%;
   z-index: 2;
 }
 .lots__look-more-link {
-  display: inline-block;
-  margin-top: 30px;
-  padding: 10px 20px;
-  color: #000;
-  text-decoration: none;
-  border-radius: 5px;
-  font-size: 18px;
-  text-align: center;
+   display: inline-block; /* Приводим к блочному поведению */
+    text-decoration: underline; /* Подчеркивание ссылки */
+    color: #000; /* Черный цвет текста */
+    font-size: 20px; /* Размер текста */
+    margin-top: 30px; /* Отступ сверху */
+    margin-left: 40px;
+    text-align: center; /* Центрируем ссылку */
+    width: 192px;
+    height: 23px;
 }
 
 .card_type_film {
