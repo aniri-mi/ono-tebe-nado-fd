@@ -66,7 +66,6 @@ text-decoration: none;
 .address p {
   font-style: normal; /* Возвращаем прямой шрифт */
   margin-bottom: 4px;                /* Убираем отступы между строками, если не нужны */
-  font-family: inherit;     /* Шрифт наследуется от родителя */
   font-size: 18px;          /* Пример размера шрифта — замените на нужное */
   color: #000000;              /* Пример цвета текста — замените на нужное */
 }
@@ -236,4 +235,124 @@ background: url(/images/card-lot-03.jpg) center/cover no-repeat;
 min-width: 334px;
     min-height: 596px;
      background-color: #000;
+}
+.about {
+  display: grid;
+  grid-template-columns: 334px 1fr; /* 334px — ширина карточки из секции лотов */
+  gap: 25px; /* Отступ между колонками */
+ padding: 24px; 
+}
+.about__column_left {
+  display: flex; /* Включаем флексбокс для выравнивания */
+  justify-content: center; /* Центрируем по горизонтали */
+  align-items: start; /* Центрируем по вертикали */
+  margin-top:10px;
+}
+
+.about__logo {
+  width: 240px; /* Фиксированная ширина */
+  height: 240px; /* Фиксированная высота */
+  background-color: #000; /* Чёрный фон */
+  border-radius: 50%; /* Делаем кругом */
+  display: flex; /* Центрируем логотип внутри круга */
+  justify-content: center;
+  align-items: center;
+}
+
+.about__logo-image {
+  max-width: 60%; /* Логотип не вылезает за пределы круга */
+}
+.about__column_right {
+display: flex; /* Используем флексбокс для вертикального выравнивания */
+    flex-direction: column; /* Направление столбцом */
+    justify-content: center; /* Вертикально центрируем контент */
+    margin-top: 113px;
+}
+
+.about__title {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 100px;
+}
+
+.about__text {
+  display: flex; /* Включаем флексбокс для параграфов */
+  flex-direction: column; /* Столбец */
+  gap: 24px; /* Отступ между параграфами (гибкий, работает при любом их количестве) */
+}
+
+.about__text p {
+  font-size: 20px;
+  line-height: 24px
+}
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* Три равные части */
+  gap: 30px; /* Отступы между колонками */
+  padding: 40px 0; /* Отступы сверху/снизу от всего подвала */
+}
+.address {
+  text-align: left; /* или center — если хотите по центру колонки */
+}
+
+.address a {
+  color: #000;
+  text-decoration: none;
+  display: block; /* Каждая ссылка занимает всю ширину строки */
+  margin-bottom: 5px;
+}
+
+.address p {
+  color: #000;
+  margin: 0;
+}
+.footer__menu-list {
+  display: flex;
+  flex-direction: column; /* Вертикальный список */
+  align-items: center; /* Центрируем пункты по горизонтали */
+  gap: 10px; /* Отступы между пунктами меню */
+  list-style: none; /* Убираем маркеры списка */
+  padding: 0;
+}
+
+.footer__menu-link {
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.footer__menu-link:hover {
+  color: #333;
+}
+
+.footer__menu-link_active {
+  color: #333;
+  text-decoration: none; /* Убираем подчёркивание для активной */
+}
+.footer__social-list {
+  display: flex;
+  flex-direction: column; /* Вертикальный список */
+  align-items: center; /* Центрируем иконки по горизонтали */
+  gap: 15px; /* Отступы между иконками */
+  list-style: none;
+  padding: 0;
+}
+
+.footer__social-link {
+  display: flex;
+  align-items: center; /* Центрируем текст и иконку по вертикали */
+  text-decoration: none;
+  color: #000;
+  transition: color 0.3s;
+}
+
+.footer__social-link:hover {
+  color: #333;
+}
+
+.footer__social-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px; /* Отступ между иконкой и текстом (если нужен) */
 }
