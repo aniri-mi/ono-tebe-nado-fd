@@ -31,13 +31,13 @@
 .header__links-list-item {
   list-style-type: circle;
   }
-.header__links-list-item_no-billit{
+.header__links-list-item_no-billit {
   list-style: none;
 }
-.header__link.header__link_active{
+.header__link.header__link_active {
   text-decoration: none;
 }
-.header__logo{
+.header__logo {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
@@ -50,7 +50,7 @@
   object-fit: contain; /* Сохраняем пропорции, не растягиваем */
   max-width: 148px;
 }
-.adress{
+.adress {
   display: flex;           /* Включаем флексбокс — теперь дочерние элементы (p) будут flex-элементами */
   flex-direction: column;   /* Располагаем элементы друг под другом (вертикально) */
   align-items: flex-start;  /* Ссылки внутри <p> не растягиваются на всю ширину, занимают только своё место */
@@ -105,16 +105,16 @@
   display: block; /* Каждое слово — отдельный блок */
   
 }
-.aligned-text_left{
+.aligned-text_left {
   text-align: left;
  
 }
-.aligned-text_center{
+.aligned-text_center {
   text-align: center;
   padding-top: 16px;
   padding-left: 30px;
 }
-.aligned-text_right{
+.aligned-text_right {
   text-align: right;
   padding-top: 18px;
   padding-left: 613px;
@@ -152,7 +152,7 @@
 }
 .lots {
   width: 1052px;
-  margin: 180px 24px 120px;  
+  margin: 180px 24px 120px;   
 }
 .lots__heading {
   font-size: 40px; /* Размер шрифта заголовка */
@@ -200,7 +200,7 @@
 
 .card__text {
   align-content: end;
-  color: #fff;
+  color: #fff; /*цвет*/
   font-size: 20px;
   line-height: 120%; /* Межстрочный интервал */
   height: 100%;
@@ -231,7 +231,7 @@
   min-height: 596px;
   background-color: #000;
 }
-.card_type_picture{
+.card_type_picture {
   background: url(/images/card-lot-03.jpg) center/cover no-repeat; 
   min-width: 334px;
   min-height: 596px;
