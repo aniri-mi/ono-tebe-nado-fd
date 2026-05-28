@@ -24,6 +24,7 @@
   list-style: none;
   gap: 34px;
   text-transform: lowercase;
+  flex-direction: row;
   font-size: 18px;
 }
 .header__links-list-item {
@@ -54,46 +55,52 @@
   align-items: flex-start; /* Ссылки внутри <p> не растягиваются на всю ширину, занимают только своё место */
   margin: 0;
   padding: 0;
-  font-style: normal;
 }
+.address a,
+.address p {
+  font-style: normal;
+  margin-bottom: 4px;
+  font-size: 18px;
+  color: #000000;
+  text-align: left; /* Выравнивание текста по левому краю */
+}
+
 .header__address {
   max-width: 240px; /* Задаём максимальную ширину (значение взято условно — замените на точную из макета) */
   justify-self: end;
   font-size: 18px;
 }
-.address a,
-.address p {
-  font-style: normal; /* Возвращаем прямой шрифт */
-  margin-bottom: 4px; /* Убираем отступы между строками, если не нужны */
-  font-size: 18px; /* Пример размера шрифта — замените на нужное */
-  color: #000000; /* Пример цвета текста — замените на нужное */
-}
 .overlay {
   /* Оверлей для карточек (переиспользуем класс) */
   position: absolute;
+  min-height: 0%;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.6);
   z-index: 2;
 }
 .cover {
   display: flex;
+  flex-direction: column;
   position: relative;
   background: url("../images/cover.jpg") center/cover no-repeat; /* Фоновое изображение */
   color: #fff;
-  letter-spacing: 30%;
   width: 1100px;
-  height: 757px;
+  min-height: 757px;
+  box-sizing: border-box;
 }
 .cover__title {
   z-index: 2;
   font-size: 100px; /* Большой размер шрифта */
   font-weight: 700; /* Жирный шрифт */
   text-transform: uppercase; /* Приведение текста к верхнему регистру */
-  padding: 165px 50px 207px 50px;
+  padding: 164px 50px 0 50px;
+  width: 1100px;
+  text-transform: uppercase;
+  letter-spacing: 30%;
 }
+
 .aligned-text {
   display: block; /* Каждое слово — отдельный блок */
-  text-transform: uppercase;
 }
 .aligned-text_left {
   text-align: left;
@@ -101,6 +108,7 @@
 .aligned-text_center {
   text-align: center;
   padding-top: 16px;
+  padding-left: 30px;
 }
 .aligned-text_right {
   text-align: right;
@@ -108,21 +116,23 @@
   padding-left: 613px;
 }
 .cover__description {
-  display: grid;
-  grid-auto-flow: column;
+  display: flex;
+  justify-content: space-between;
   gap: 38px;
   z-index: 2;
-  margin: 656px 50px 50px 50px;
-  width: 1000px;
+  margin: 105px 50px 50px 50px;
+  max-width: 1000px;
+  box-sizing: border-box;
+  width: 100%;
 }
+
 .cover__description-text {
-  text-transform: uppercase;
   font-size: 22px; /* Размер шрифта */
+  text-transform: uppercase;
   word-spacing: 18.5px; /* Расстояние между словами */
-  color: #fff;
-  margin-top: 1px;
   padding-top: 12px;
 }
+
 .bet-button {
   background-color: transparent;
   padding: 12px 32px; /* Внутренние отступы */
@@ -140,8 +150,8 @@
   margin: 180px 24px 120px;
 }
 .lots__heading {
-  text-transform: uppercase;
   font-size: 40px; /* Размер шрифта заголовка */
+  text-transform: uppercase;
   margin: 0px 915px 27px 40px;
   width: 121px;
   line-height: 1.2;
@@ -155,7 +165,7 @@
 }
 .lots__card-list-item {
   width: 334px;
-  min-height: 596px;
+  max-height: 596px;
 }
 .card-link {
   display: block; /* Занимает всю площадь карточки */
@@ -177,6 +187,7 @@
   min-width: 334px;
   min-height: 596px;
 }
+
 .card__title {
   color: #fff;
   font-size: 22px;
@@ -184,6 +195,7 @@
   text-decoration: underline;
   z-index: 2;
 }
+
 .card__text {
   align-content: end;
   color: #fff;
@@ -224,6 +236,7 @@
   align-items: start; /* Центрируем по вертикали */
   margin-top: 11px;
 }
+
 .about__logo {
   width: 240px; /* Фиксированная ширина */
   height: 240px; /* Фиксированная высота */
@@ -233,6 +246,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .about__logo-image {
   max-width: 60%; /* Логотип не вылезает за пределы круга */
 }
@@ -242,18 +256,20 @@
   justify-content: center; /* Вертикально центрируем контент */
   margin-top: 113px;
 }
+
 .about__title {
   text-transform: uppercase;
-  color: #000;
   font-size: 40px;
   font-weight: 700;
   margin-bottom: 100px;
 }
+
 .about__text {
   display: flex; /* Включаем флексбокс для параграфов */
   flex-direction: column; /* Столбец */
-  gap: 20px; /* Отступ между параграфами (гибкий, работает при любом их количестве) */
+  gap: 24px; /* Отступ между параграфами (гибкий, работает при любом их количестве) */
 }
+
 .about__text p {
   font-size: 20px;
   line-height: 24px;
@@ -274,6 +290,7 @@
   padding: 0;
   font-size: 18px;
 }
+
 .footer__menu-link {
   font-family: "Raleway", sans-serif;
   font-weight: 400;
