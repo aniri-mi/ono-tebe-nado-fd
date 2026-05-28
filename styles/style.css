@@ -5,14 +5,13 @@
   background-color: #fff; /* Цвет фона */
   color: #000;
   padding: 93px 51px 95px 50px;
- }
+}
 .header__menu {
   display: flex;
   gap: 34px;
   align-items: center;
   box-sizing: border-box;
- 
- }
+}
 .header__link {
   font-family: Raleway;
   font-weight: 400;
@@ -30,7 +29,7 @@
 }
 .header__links-list-item {
   list-style-type: circle;
-  }
+}
 .header__links-list-item_no-billit {
   list-style: none;
 }
@@ -51,26 +50,27 @@
   max-width: 148px;
 }
 .adress {
-  display: flex;           /* Включаем флексбокс — теперь дочерние элементы (p) будут flex-элементами */
-  flex-direction: column;   /* Располагаем элементы друг под другом (вертикально) */
-  align-items: flex-start;  /* Ссылки внутри <p> не растягиваются на всю ширину, занимают только своё место */
+  display: flex; /* Включаем флексбокс — теперь дочерние элементы (p) будут flex-элементами */
+  flex-direction: column; /* Располагаем элементы друг под другом (вертикально) */
+  align-items: flex-start; /* Ссылки внутри <p> не растягиваются на всю ширину, занимают только своё место */
   margin: 0;
   padding: 0;
   font-style: Regular;
 }
 .header__address {
-  max-width: 240px;         /* Задаём максимальную ширину (значение взято условно — замените на точную из макета) */
+  max-width: 240px; /* Задаём максимальную ширину (значение взято условно — замените на точную из макета) */
   height: 98px;
-  justify-self: end;  
+  justify-self: end;
   font-size: 18px;
 }
 .address p {
   font-style: normal; /* Возвращаем прямой шрифт */
-  margin-bottom: 4px;                /* Убираем отступы между строками, если не нужны */
-  font-size: 18px;          /* Пример размера шрифта — замените на нужное */
-  color: #000000;              /* Пример цвета текста — замените на нужное */
+  margin-bottom: 4px; /* Убираем отступы между строками, если не нужны */
+  font-size: 18px; /* Пример размера шрифта — замените на нужное */
+  color: #000000; /* Пример цвета текста — замените на нужное */
 }
-.overlay { /* Оверлей для карточек (переиспользуем класс) */
+.overlay {
+  /* Оверлей для карточек (переиспользуем класс) */
   position: absolute;
   min-height: 0%;
   min-width: 0;
@@ -80,7 +80,6 @@
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.6);
   z-index: 2;
-
 }
 .cover {
   display: flex;
@@ -103,11 +102,9 @@
 
 .aligned-text {
   display: block; /* Каждое слово — отдельный блок */
-  
 }
 .aligned-text_left {
   text-align: left;
- 
 }
 .aligned-text_center {
   text-align: center;
@@ -152,7 +149,7 @@
 }
 .lots {
   width: 1052px;
-  margin: 180px 24px 120px;   
+  margin: 180px 24px 120px;
 }
 .lots__heading {
   font-size: 40px; /* Размер шрифта заголовка */
@@ -200,9 +197,9 @@
 
 .card__text {
   align-content: end;
-  color: #fff; 
+  color: #fff;
   font-size: 20px;
-  line-height: 120%; 
+  line-height: 120%;
   height: 100%;
   z-index: 2;
 }
@@ -217,22 +214,20 @@
   width: 192px;
   height: 23px;
 }
-
 .card_type_film {
-  background: url(/images/card-lot-01.jpg) center/cover no-repeat; 
+  background: url(/images/card-lot-01.jpg) center/cover no-repeat;
   min-width: 334px;
   min-height: 596px;
   background-color: #000;
 }
-
 .card_type_book {
-  background: url(/images/card-lot-02.jpg) center/cover no-repeat; 
+  background: url(/images/card-lot-02.jpg) center/cover no-repeat;
   min-width: 334px;
   min-height: 596px;
   background-color: #000;
 }
 .card_type_picture {
-  background: url(/images/card-lot-03.jpg) center/cover no-repeat; 
+  background: url(/images/card-lot-03.jpg) center/cover no-repeat;
   min-width: 334px;
   min-height: 596px;
   background-color: #000;
@@ -241,7 +236,7 @@
   display: grid;
   grid-template-columns: 334px 1fr; /* 334px — ширина карточки из секции лотов */
   gap: 25px; /* Отступ между колонками */
-  padding: 24px; 
+  padding: 24px;
 }
 .about__column_left {
   display: flex; /* Включаем флексбокс для выравнивания */
@@ -284,7 +279,7 @@
 
 .about__text p {
   font-size: 20px;
-  line-height: 24px
+  line-height: 24px;
 }
 .footer {
   display: grid;
@@ -315,7 +310,7 @@
 }
 .footer__social-list {
   display: flex;
-  flex-direction:  row-reverse; /* Горизонтальный список */
+  flex-direction: row-reverse; /* Горизонтальный список */
   align-items: start; /* Центрируем иконки по горизонтали */
   gap: 48px; /* Отступы между иконками */
   list-style: none;
