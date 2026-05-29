@@ -164,7 +164,7 @@
 }
 .lots__card-list-item {
   width: 334px;
-  max-height: 596px;
+  min-height: 596px;
 }
 .card-link {
   display: block; /* Занимает всю площадь карточки */
@@ -184,7 +184,6 @@
   height: 100%;
   color: #fff;
   min-width: 334px;
-  min-height: 596px;
 }
 
 .card__title {
@@ -200,8 +199,8 @@
   color: #fff;
   font-size: 20px;
   line-height: 120%;
-  height: 100%;
   z-index: 2;
+  margin-top: auto;
 }
 .lots__look-more-link {
   display: inline-block; /* Приводим к блочному поведению */
@@ -212,7 +211,6 @@
   margin-left: 40px;
   text-align: center; /* Центрируем ссылку */
   width: 192px;
-  height: 23px;
 }
 .card_type_film {
   background: url("../images/card-lot-01.jpg") center/cover no-repeat;
